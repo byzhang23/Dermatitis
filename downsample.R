@@ -8,10 +8,7 @@ library(dplyr)
 ## target_library_size: Downsampled to this target_library_size
 ## seed: A random seed
 
-downsample <- function(data, # input data frame (must contain columns: 
-                       B = 100,# downsampled_data times
-                       target_library_size,
-                       seed = 12345){
+downsample <- function(data, B = 100, target_library_size, seed = 12345){
     downsample.ls <- NULL
     for (b in 1:B) {
         
